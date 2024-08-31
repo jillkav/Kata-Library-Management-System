@@ -33,10 +33,7 @@ class Library {
         book.borrowed = false;
       }
 
-      getAvailableBooks() {
-        return this.books.filter(book => !book.borrowed);
-      }
-    
+      
   }
 
   module.exports = Library;  
