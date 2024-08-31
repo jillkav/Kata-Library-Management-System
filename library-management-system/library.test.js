@@ -21,4 +21,19 @@ describe('Library Management System', () => {
     library.addBook(book1);
     expect(() => library.addBook(book2)).toThrow('Book with this ISBN already exists.');
   });
+
+  test('should allow a user to borrow a book if available', () => {
+    const book = { isbn: '1234567890', title: 'Clean Code', author: 'Robert C. Martin', year: 2008 };
+    library.addBook(book);
+    library.borrowBook('1234567890');
+    expect(library.books[0].borrowed).toBe(true);
+  });
+  
+  test('should not allow a user to borrow a book if it is already borrowed', () => {
+    const book = { isbn: '1234567890', title: 'Clean Code', author: 'Robert C. Martin', year: 2008 };
+    library.addBook(book);
+    library.borrowBook('1234567890');
+    expect(() => library.borrowBook('1234567890')).toThrow('Book is already borrowed.');
+  });
+  
 });
