@@ -56,4 +56,14 @@ describe('Library Management System', () => {
     expect(() => library.returnBook('1234567890')).toThrow('Book is not borrowed.');
   });
   
+  test('should return a list of all available books', () => {
+    const book1 = { isbn: '1234567890', title: 'Clean Code', author: 'Robert C. Martin', year: 2008 };
+    const book2 = { isbn: '0987654321', title: 'Refactoring', author: 'Martin Fowler', year: 1999 };
+    library.addBook(book1);
+    library.addBook(book2);
+    library.borrowBook('1234567890');
+    const availableBooks = library.getAvailableBooks();
+    expect(availableBooks).toEqual([book2]);
+  });
+  
 });
