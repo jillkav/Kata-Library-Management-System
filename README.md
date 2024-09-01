@@ -2,7 +2,7 @@ Kata: Library Management System
 
 -> Objective
 
-Create a simple library management system that allows users to perform basic operations such as adding books, borrowing books, returning books, and viewing available books.
+ Create a simple library management system that allows users to perform basic operations such as adding books, borrowing books, returning books, and viewing available books.
 
 -> Requirements:
 
@@ -32,17 +32,17 @@ Create a simple library management system that allows users to perform basic ope
 
 -> Structure of Project:
 
-    |-- src/
+   
 
-    |    |-- library.js          # Main application logic
+       |-- library.js               # Main application logic
 
-    |-- test/
 
-    |    |-- library.test.js     # Test cases
 
-    |-- package.json             # Project metadata and dependencies
+       |-- library.test.js          # Test cases
 
-    |-- README.md                # Project documentation
+       |-- package.json             # Project metadata and dependencies
+
+       |-- README.md                # Project documentation
     
 ->Git Workflow:
 
@@ -71,3 +71,15 @@ Create a simple library management system that allows users to perform basic ope
     git remote add origin <remote-repository-url>
 
     git push -u origin main
+    
+-> Prerequisites:
+
+Ensure you have the following installed on your local machine:
+
+ -[Node.js](https://nodejs.org/) (which includes npm)
+  
+ -JavaScript: Core language for implementation.
+  
+ -Jest: Testing framework used to ensure the correctness of the system.
+
+ -Git: Version control for tracking code changes.
